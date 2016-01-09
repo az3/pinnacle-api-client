@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="ConsoleLog" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss,SSS", "UTC"} %-5level [%logger] \(%thread\) %msg%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+    <!--
+    <appender name="MainLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/var/log/iddaa-parser/iddaa-parser.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{"HH:mm:ss,SSS", "UTC"} %-5level [%logger] \(%thread\) %msg%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+    <appender name="ErrorLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>/var/log/iddaa-parser/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{"HH:mm:ss,SSS", "UTC"} %-5level [%logger] \(%thread\) %msg%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+    -->
+    <root level="INFO">
+        <appender-ref ref="ConsoleLog"/>
+        <!--
+        <appender-ref ref="MainLogFile"/>
+        <appender-ref ref="ErrorLogFile"/>
+        -->
+    </root>
+</configuration>
